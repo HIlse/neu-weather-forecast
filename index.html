@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How's the weather?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+    <div id="header" class="neu-up">
+        How's the weather?
+    </div>
+    <div style="text-align: center">
+        <div id="current-condition">
+            <h1 class="city-name">{{currentWeather.name}}</h1>
+            <p class="current-time">{{date}}</p>
+            <div class="condition-detail">      
+                <div class="neu-up condition-card">
+                    <img src="images/tile000.png" alt="sunrise" width="40px">
+                    <div><span>{{sunriseTime}}</span></div>
+                </div>
+                <div class="neu-up condition-card">
+                    <img src="images/tile003.png" alt="sunset" width="40px">
+                    <div><span>{{sunsetTime}}</span></div>
+                </div>
+                <div class="neu-up condition-card">
+                    <img src="images/tile011.png" alt="cloud" width="40px">
+                    <div><span>{{cloudiness}}%</span></div>
+                </div>
+                <div class="neu-up condition-card">
+                    <img src="images/tile015.png" alt="windspeed" width="40px">
+                    <div><span>{{windSpeed}} m/s</span></div>
+                </div>
+                <current-condition-card 
+                image="images/tile000.png"
+                name='sunrise'
+                v-bind:text='sunriseTime'
+                ></current-condition-card>
+                                 
+            </div>
+           
+
+        </div>
+        <div id="current-weather">
+            hello
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
